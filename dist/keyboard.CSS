@@ -1,0 +1,86 @@
+/* ===== Floating Virtual Keyboard ===== */
+#virtual-keyboard {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -320px; /* ซ่อนไว้ใต้จอก่อน */
+  background: #f7f4f0;
+  border-top: 3px solid #8c1a1a;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.25);
+  padding: 12px 16px 18px;
+  z-index: 999999;
+  transition: bottom 0.25s ease;
+  font-family: 'Anuphan', sans-serif;
+  user-select: none;
+}
+
+#virtual-keyboard.vk-open {
+  bottom: 0;
+}
+
+.vk-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.vk-key {
+  flex: 1;
+  min-width: 36px;
+  max-width: 64px;
+  height: 52px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  transition: transform 0.08s ease, background 0.08s ease;
+}
+
+.vk-key:active {
+  transform: scale(0.93);
+  background: #f0d9d9;
+}
+
+.vk-key.vk-wide {
+  flex: 2;
+  max-width: 140px;
+}
+
+.vk-key.vk-space {
+  flex: 6;
+  max-width: 500px;
+}
+
+.vk-key.vk-action {
+  background: linear-gradient(135deg, #8c1a1a, #6b0000);
+  color: white;
+  font-weight: 700;
+}
+
+.vk-key.vk-done {
+  background: linear-gradient(135deg, #2fae53, #1e7e34);
+  color: white;
+  font-weight: 700;
+}
+
+.vk-toprow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 6px;
+}
+
+.vk-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #8c1a1a;
+  cursor: pointer;
+  padding: 4px 12px;
+}
