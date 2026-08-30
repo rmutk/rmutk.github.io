@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTK Engineering</title>
+
+
+
+
+<link rel="stylesheet" href="/keyboard.css">
+<script defer src="/keyboard.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; }
+    </style>
+<link rel="modulepreload" href="/front-end-2229ba726dcbb639.js" crossorigin="anonymous" integrity="sha384-uzT7z3/IENJIEDq/HQAiUJKtHKI5/joDayWQfQsZc8fSle1ATiHKlmSzOAJ0EzWC"><link rel="preload" href="/front-end-2229ba726dcbb639_bg.wasm" crossorigin="anonymous" integrity="sha384-bbAU65sPK9cRppOU3tSyvfcKldrQDx1cPj01bK4Z6CtR4CHYaCKSiU2MjHI1tL5z" as="fetch" type="application/wasm"></head>
+<body>
+    
+<script type="module">
+import init, * as bindings from '/front-end-2229ba726dcbb639.js';
+const wasm = await init({ module_or_path: '/front-end-2229ba726dcbb639_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
